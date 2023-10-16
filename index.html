@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>
+            Cursinho Enem/Concursos
+        </h1>
+        <p class="texto">
+            Inscreva-se já
+        </p>
+        <form id="form">
+            <div>
+            <input type="text" id="nomealuno" required placeholder="Digite seu nome completo" class="inputs required" oninput="nameValidade()">
+            <span class="span-caracteres">
+                o nome deve ter no minimo 3 caracteres
+            </span>
+        </div>
+        <div>
+            <input type="email" id="emailaluno" required placeholder="Digite seu email" class="inputs required" oninput="emailValido()">
+            <span class="span-caracteres">
+                Digite um email valido
+            </span>
+        </div>
+            <div>
+                <input type="password" id="senha" required placeholder="Digite sua senha" class="inputs required" oninput="mainpassvalido()">
+                <span class="span-caracteres">
+                    A senha deve ter no minimo 8 caracteres
+                </span>
+            </div>
+            <div>
+                <input type="password" id="resenha" required placeholder="Repita sua senha" class="inputs required" oninput="comparesenha()">
+                <span class="span-caracteres">
+                    A senha deve ser compativeis 
+                </span>
+            </div>
+            <textarea class="inputs" name="Descrição" id="Descrição" cols="25" rows="10" placeholder="Fale um pouco sobre voce..."></textarea>
+            <p>
+                Sexo
+            </p>
+            <div id="sexo"><div class="box-select">
+                <div>
+                    <input type="radio" id="m" value="m" name="Sexo">
+                    <label for="m">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" id="f" value="f" name="Sexo">
+                    <label for="f">Feminino</label>
+                </div>
+            </div>
+
+            </div>
+            <p>
+            Qual seu nivel de escolaridade ?
+            </p>
+            <div id="escolaridade">
+                <div class="box-select">
+                    <input type="checkbox" id="fundamental" value="fundamental" name="nivel">
+                    <label for="fundamental">Fundamental completo</label>
+                </div>
+                <div class="box-select">
+                    <input type="checkbox" id="medio" value="medio" name="nivel">
+                    <label for="medio">Ensino medio completo</label>
+                </div>
+                <div class="box-select">
+                    <input type="checkbox" id="superior" value="superio" name="nivel">
+                    <label for="superior">Superior completo</label>
+                </div>
+            </div>
+            <button type="submit">Enviar Inscrição</button>
+        </form>
+    </div>
+    </body>
+    <script 
+    src="./main.js">
+    </script>
+</html>
